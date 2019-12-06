@@ -1,0 +1,488 @@
+/* flecha para que la pagina vaya hacia arriba */
+
+/*--------------------------------------------*/
+
+body {
+      background-color:#dadada;
+      font-family: 'Questrial', sans-serif;
+     }
+
+/*aqui ponemos la imagen de la cabecera */
+
+header {
+        position: relative;
+        background-image: url("../img/header2.jpg") ;
+        background-size: cover;
+        background-position: center;
+        height: 400px;  
+        /*background-size:100%;
+        background-repeat: no-repeat;*/
+       }
+
+/*modificamos el titulo de la pagina*/
+
+#title {
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
+
+/*reseteo a toda la pagina*/
+
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    list-style: none;
+   }
+
+/*-----------------barra de navegación---------------*/
+
+nav ul {
+        background-color: #76b900;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+       }
+
+nav ul li {
+           display: inline-block;
+           padding: 10px 10px;
+          }
+
+nav ul li a {
+             text-decoration: none;
+             color: black;
+            }
+
+nav ul li:hover {
+                 background-color: #C0C0C0;
+                }
+
+nav ul li a:hover {
+                   color: indigo;
+                  }
+
+@media screen and (max-width: 1120px) {
+    nav ul li {display: flex;
+        justify-content: center;}
+    }
+/*--------------------------------------------------------*/
+
+#wrapper{
+    max-width: 1500px; 
+    margin: auto;
+    background: #dadada;
+        }
+
+/*acompañamiento barra de navegación */
+
+.navegacion {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    }
+
+/* ids dentro del main*/
+
+#introduccion {
+    color:black;
+    /*font-size: 1.2vw;*/
+    text-align: justify;
+    }
+
+#tipos {
+        color:black;
+        /*font-size: 1.2vw;*/
+        text-align: justify;
+       }
+
+#funcion {
+          color: black;
+          /*font-size: 1.2vw;*/
+          text-align: justify;
+         }
+
+#instalacion{
+             color: black;
+             /*font-size: 1.2vw;*/
+             text-align: justify;
+            }
+
+#fabricantes{
+            color: black;
+            /*font-size: 1.2vw;*/
+            text-align: justify;
+            }
+
+#encontrar{
+    color: black;
+    /*font-size: 1.2vw;*/
+    text-align: justify;
+}
+
+/*modificación de textos generales*/
+
+h2 {
+    font-size: 50px;
+    color:#76b900;
+    text-align: center;
+    padding: 60px 0;
+   }
+
+h3{
+    font-size: 30px;
+    padding: 50px 0;
+}
+
+p{
+    font-size: 20px;
+    padding: 7px;
+}
+p b{
+    font-size: 20px;
+}
+li{
+    font-size: 20px;
+}
+
+
+/*--------------------------------------------*/
+main{
+    max-width: 1500px; 
+    margin: auto;
+    background: #dadada;
+}
+
+.padre-flex{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+
+.padre-flex__items {
+    flex: 0 24%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 1;
+    background: white;
+    position: relative;
+}
+
+img{
+    max-width: 100%;
+}
+
+.titulos-cajas{
+    font-size: 30px;
+    color:#76b900;
+    text-align: center;
+    padding: 30px 0;
+} 
+
+.info-tarjeta>p {
+    color: black;
+    text-align: center;
+}
+
+/*tipos*/
+
+.padre-flex-tipo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.hijo-flex{
+    flex: 0 24%;
+    background: white;
+    margin-top: 20px;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.transparencia{
+    background: black;
+    position: absolute;
+    top:0;
+    margin: 0 auto;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    display: flex;
+
+}
+
+.transparencia:hover{
+    opacity: 0.8;
+}
+
+.transparencia>p{
+    color: white;
+    text-align: center;
+    padding-top: 30%;
+}
+
+
+.padre-flex-inst{
+    display: flex;
+
+}
+
+.hijo-inst-video{
+    flex: 0 30%;
+}
+
+.hijo-inst-text{
+    flex: 0 70%;
+}
+
+
+
+/*video*/
+.video {
+    margin: 0 50px;
+}
+
+
+/*parte de conectores*/
+
+.conector-padre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.conector-hijo {
+    flex: 0 20%;
+    background: white;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.conector-hijo-text{
+    padding: 30px;
+}
+
+
+
+.conector-hijo-text{
+    flex: 0 70%;
+    background: white;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*software*/
+
+.padre-flex-soft {
+    display: flex;
+    justify-content: space-between;
+}
+.hijo-flex-soft{
+    flex: 0 48%;
+}
+
+
+/* fabricantes y tiendas*/
+
+.padre-flex-fabri{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.hijo-flex-fabri{
+    flex: 0 12%;
+
+}
+
+/*Rango de precios*/
+
+.padre-flex-precio {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 0;
+}
+.hijo-flex-precio {
+    flex: 0 30%;
+    text-align: center;
+}
+
+.funciones, .instalaciones, .conectores {padding: 0 40px;}
+
+
+.boton{
+    background-color: #76b900;
+    border: none;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 20px 0;
+
+}
+
+/*footer*/
+footer{
+    background-color: #76b900;
+    color: black;
+    height: 100px;
+    display: block;
+    text-align: center;
+    padding-top: 10px;  
+}
+
+/*//////////mediaa///////////*/
+
+@media only screen and (max-width:768px) {
+    .padre-flex-inst, .padre-flex{
+        flex-wrap: wrap;
+    }
+
+    .hijo-inst-video, .hijo-inst-text{
+        flex: 0 100%;
+    }
+
+    .video{
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .padre-flex__items, .hijo-flex{
+        flex: 0 50%;
+    }
+
+    .video>img{
+        display: none;
+    }
+
+    .funciones, .instalaciones, .conectores {padding: 0 40px;}
+
+    .conector-padre{ justify-content: center;}
+
+    .padre-flex-precio{justify-content: space-around;}
+
+    .hijo-flex-precio{
+        flex: 0 26%;
+    }
+}
+
+
+@media only screen and (max-width:500px) {
+    .padre-flex, .padre-flex-inst, .padre-flex-soft, .padre-flex-fabri, .padre-flex-precio {
+        flex-wrap: wrap;
+    }
+
+    .padre-flex__items, .hijo-flex, .hijo-inst-video, .hijo-inst-text, .conector-hijo,     .conector-hijo-text, .hijo-flex-soft, .hijo-flex-precio {
+        flex: 0 100%;
+    }
+
+    .hijo-flex-fabri{
+        flex: 0 50%;
+    }
+    h2{
+        font-size: 30px;
+    }
+
+    h3{ font-size: 20px;}
+
+    p{
+        font-size: 18px;
+    }
+
+    .video>iframe{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px 0;
+    }
+
+    .video>img{
+        display: none;
+    }
+
+    .conector-hijo-text{
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    .video{
+        text-align: center;
+        margin: 20px 0;}
+
+}
+
+
+@media only screen and (max-width:320px) {
+    .padre-flex, .padre-flex-inst, .padre-flex-soft, .padre-flex-fabri, .padre-flex-precio {
+        flex-wrap: wrap;
+    }
+
+    .padre-flex__items, .hijo-flex, .hijo-inst-video, .hijo-inst-text, .conector-hijo,     .conector-hijo-text, .hijo-flex-soft, .hijo-flex-precio {
+        flex: 0 100%;
+    }
+
+    .hijo-flex-fabri{
+        flex: 0 50%;
+    }
+
+    h2{
+        font-size: 35px;
+    }
+
+    p{
+        font-size: 18px;
+    }
+
+    .video>iframe{
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px 0;
+    }
+
+    .video>img{
+        display: none;
+    }
+
+    .conector-hijo-text{
+        margin-top: 0;
+    }
+}
+
+
+@media only screen and (max-width:1450px) {
+    .padre-flex-inst{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hijo-inst-text .hijo-inst-video{
+        flex: 0 100%;
+    }
+
+    .hijo-inst-video{ margin: 20px 0;}
+
+    .video>img{display: none;}
+}
